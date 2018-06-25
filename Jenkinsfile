@@ -11,7 +11,7 @@ stage('git') {
 stage('Build') {
      // sh '/opt/maven/bin/mvn -f pom.xml clean install'
      // sh 'cd my-app'
-     sh '/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.5.4/bin/mvn -f my-app/pom.xml clean install'
+     sh '/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.5.4/bin/mvn -f pom.xml clean install'
 }
 stage ('Run') {
     sh 'java -jar target/my-app-1.0-SNAPSHOT.jar'
